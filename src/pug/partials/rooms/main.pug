@@ -1,0 +1,96 @@
+main.site-main
+	section.main-content-room.main-content-room-inner
+		h2 
+			a(href="#") Номера /
+		aside
+			.cat-nav
+				.cat-nav-item
+					h2 Студии
+					ul
+						li
+							a(href="rooms.html") Sketch
+				.cat-nav-item
+					h2 Одна спальня
+					ul
+						li
+							a(href="rooms.html") Essay
+						li
+							a(href="rooms.html") Story
+						li
+							a(href="rooms.html") Poem
+						li
+							a(href="rooms.html") Novel
+				.cat-nav-item
+					h2 Две спальни
+					ul
+						li
+							a(href="#") Epic
+		.room
+			.room-preview
+				.room-preview__item
+					picture(data-src="img/photogallery/sketch2.jpg")
+						img(src="img/photogallery/sketch2.jpg" alt="image" full-image="img/photogallery/sketch2.jpg")
+					div
+				.room-preview__item
+					source(media="(min-width: 768px)" srcset="img/photogallery/sketch.jpg")
+					img(src="img/photogallery/sketch2.jpg", alt="room interior")
+				.room-preview__item
+					img(src="img/photogallery/sketch3.jpg", alt="room interior")
+				.room-preview__item
+					img(src="img/photogallery/sketch4.jpg", alt="room interior")
+				.room-preview__item
+					img(src="img/photogallery/sketch5.jpg", alt="room interior")
+			
+			.room-header
+				h2 Sketch
+				.room-header-size-capacity
+					.capacity  до #[span 2] гостей	
+					.size #[span 27] м<sup>2</sup>
+				.room-slider-counter 
+					.num
+			.room-description
+				h3 Компактные апартаменты-студии с одной двуспальной кроватью.
+				p.
+					Прихожая с гардеробом, спальная зона, полноценная кухня, обеденный стол, ванная комната с душем, широкий деревянный подоконник с рабочей зоной, подборкой книг и журналов, комодом и наблюдательным пунктом. 				
+			.room-slider-desc-counter
+				div
+					.num
+			//- .room-slider-nav
+			//- 	p
+			//- 		img(src="img/photogallery/sketch.jpg", alt="slider thumbnail")
+			//- 	p
+			//- 		img(src="img/photogallery/sketch2.jpg", alt="slider thumbnail")
+			//- 	p
+			//- 		img(src="img/photogallery/sketch3.jpg", alt="slider thumbnail")
+			//- 	p
+			//- 		img(src="img/photogallery/sketch4.jpg", alt="slider thumbnail")
+			//- 	p
+			//- 		img(src="img/photogallery/sketch5.jpg", alt="slider thumbnail")
+				
+			.room-footnote
+				.footnote-item
+					img(src="img/assets/icons/f_ic_bed.svg", alt="footnote icon")
+					p Двуспальная коровать 160x200 см
+			
+				.footnote-item
+					img(src="img/assets/icons/f_ic_tv.svg", alt="footnote icon")
+					p Интерактивное телевидение Full HD с легким подключением по Bluetooth
+			
+				.footnote-item
+					img(src="img/assets/icons/f_ic_gym.svg", alt="footnote icon")
+					p Коврик для йоги и гантели
+			
+				.footnote-item
+					img(src="img/assets/icons/f_ic-pillow.svg", alt="footnote icon")
+					p Меню подушек
+			
+				.footnote-item
+					img(src="img/assets/icons/f_ic_4.svg", alt="footnote icon")
+					p Количество таких номеров в отеле: 4
+
+				.footnote-item
+					img(src="img/assets/icons/f_ic-interior.svg", alt="footnote icon")
+					p Дизайнерские и винтажные предметы интерьера
+
+	
+	include ../booking

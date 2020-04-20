@@ -1,0 +1,67 @@
+// front page text carousel
+.start-page .slick-slider {
+	display: flex;
+}
+.start-page .slick-track {
+	display: flex;
+	align-items: center;
+}
+
+.text-carousel {
+	display: flex;
+	flex-grow: 1;
+	flex-direction: column;
+	justify-content: center;
+	max-width: 80vw;
+	margin-top: 4rem;
+	& br {
+		display: none;
+	}
+	& h2 {
+		font-family: $third-font-family;
+		font-weight: normal;
+		font-size: 3.5rem;
+		color: ac(white);
+		word-break: keep-all;
+		line-height: 1.2;
+	}
+	@media (min-width: 375px) {
+		& h2 {
+			font-size: 4rem;
+		}
+	 }
+	@media (min-width: 380px) {
+		& h2 {
+			font-size: 4.75rem;
+		}
+	 }
+	@media (min-width: $b-medium) {
+		margin-top: 0;
+		& h2 {
+			font-size: 8rem;
+		}
+	}
+	@media (min-width: $b-large) {
+		height: 100%;
+		& br {
+			display: inline;
+		}
+		& h2 {
+			font-size: 9rem;
+		}
+	}
+	@media (min-width: $b-xxlarge) {
+		max-width: 175rem;
+		& h2 {
+			font-size: 12.5rem;
+		}
+	}
+	@media (min-width: $b-xxxlarge) {
+		max-width: 300rem;
+		& h2 {
+			font-size: 6vw;
+		}
+	}
+}
+
+

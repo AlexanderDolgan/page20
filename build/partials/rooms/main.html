@@ -1,0 +1,101 @@
+
+<main class="site-main">
+  <section class="main-content-room main-content-room-inner">
+    <h2> <a href="#">Номера /</a></h2>
+    <aside>
+      <div class="cat-nav">
+        <div class="cat-nav-item">
+          <h2>Студии</h2>
+          <ul>
+            <li><a href="rooms.html">Sketch</a></li>
+          </ul>
+        </div>
+        <div class="cat-nav-item">
+          <h2>Одна спальня</h2>
+          <ul>
+            <li><a href="rooms.html">Essay</a></li>
+            <li><a href="rooms.html">Story</a></li>
+            <li><a href="rooms.html">Poem</a></li>
+            <li><a href="rooms.html">Novel</a></li>
+          </ul>
+        </div>
+        <div class="cat-nav-item">
+          <h2>Две спальни</h2>
+          <ul>
+            <li><a href="#">Epic</a></li>
+          </ul>
+        </div>
+      </div>
+    </aside>
+    <div class="room">
+      <div class="room-preview">
+        <div class="room-preview__item">
+          <picture data-src="img/photogallery/sketch2.jpg"><img src="img/photogallery/sketch2.jpg" alt="image" full-image="img/photogallery/sketch2.jpg"/></picture>
+          <div></div>
+        </div>
+        <div class="room-preview__item">
+          <source media="(min-width: 768px)" srcset="img/photogallery/sketch.jpg"/><img src="img/photogallery/sketch2.jpg" alt="room interior"/>
+        </div>
+        <div class="room-preview__item"><img src="img/photogallery/sketch3.jpg" alt="room interior"/></div>
+        <div class="room-preview__item"><img src="img/photogallery/sketch4.jpg" alt="room interior"/></div>
+        <div class="room-preview__item"><img src="img/photogallery/sketch5.jpg" alt="room interior"/></div>
+      </div>
+      <div class="room-header">
+        <h2>Sketch</h2>
+        <div class="room-header-size-capacity">
+          <div class="capacity"> до <span>2</span> гостей	</div>
+          <div class="size"><span>27</span> м<sup>2</sup></div>
+        </div>
+        <div class="room-slider-counter"> 
+          <div class="num"></div>
+        </div>
+      </div>
+      <div class="room-description">
+        <h3>Компактные апартаменты-студии с одной двуспальной кроватью.</h3>
+        <p>Прихожая с гардеробом, спальная зона, полноценная кухня, обеденный стол, ванная комната с душем, широкий деревянный подоконник с рабочей зоной, подборкой книг и журналов, комодом и наблюдательным пунктом. 				</p>
+      </div>
+      <div class="room-slider-desc-counter">
+        <div>
+          <div class="num"></div>
+        </div>
+      </div>
+      <div class="room-footnote">
+        <div class="footnote-item"><img src="img/assets/icons/f_ic_bed.svg" alt="footnote icon"/>
+          <p>Двуспальная коровать 160x200 см</p>
+        </div>
+        <div class="footnote-item"><img src="img/assets/icons/f_ic_tv.svg" alt="footnote icon"/>
+          <p>Интерактивное телевидение Full HD с легким подключением по Bluetooth</p>
+        </div>
+        <div class="footnote-item"><img src="img/assets/icons/f_ic_gym.svg" alt="footnote icon"/>
+          <p>Коврик для йоги и гантели</p>
+        </div>
+        <div class="footnote-item"><img src="img/assets/icons/f_ic-pillow.svg" alt="footnote icon"/>
+          <p>Меню подушек</p>
+        </div>
+        <div class="footnote-item"><img src="img/assets/icons/f_ic_4.svg" alt="footnote icon"/>
+          <p>Количество таких номеров в отеле: 4</p>
+        </div>
+        <div class="footnote-item"><img src="img/assets/icons/f_ic-interior.svg" alt="footnote icon"/>
+          <p>Дизайнерские и винтажные предметы интерьера</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <div class="booking">
+    <form action="index.html" method="post">
+      <div class="fieldset">
+        <p>
+          <label for="check-in">Заезд</label>
+          <input type="date" name="check-in" value="2020-07-21" min="2020-01-01" max="2020-12-31"/>
+        </p>
+        <p>
+          <label for="check-out">Выезд</label>
+          <input type="date" name="check-out" value="2020-07-22" min="2020-01-01" max="2020-12-31"/>
+        </p>
+      </div>
+      <p> 
+        <button class="btn" type="submit">Найти номер</button>
+      </p>
+    </form>
+  </div>
+</main>

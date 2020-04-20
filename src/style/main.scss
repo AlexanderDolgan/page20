@@ -1,0 +1,55 @@
+/*
+Theme Name: page20
+Author: AD
+Author URI:
+Version: 1.0
+*/
+
+@font-face {
+	font-family: 'body_grotesquelarge_regular';
+	src: url('../fonts/BodyGrotesque-LargeRegular.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'body_grotesquelarge_light';
+	src: url('../fonts/BodyGrotesque-LargeLight.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: 'body_grotesquelarge_bold';
+	src: url('../fonts/BodyGrotesque-LargeBold.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
+
+// @use 'util/settings';
+// @forward 'util/settings';
+
+//settings-var
+@import "util/function";
+@import "util/settings"; //vars
+@import "util/mixin";
+//sprites
+@import "util/sprite";
+
+//base
+@import "base/base"; //main settings ressets
+
+//layout
+@import "layout/index";
+
+//modules
+@import "modules/index";
+
+//states
+@import "states/index";
+
+@import "../../bower_components/lightgallery/src/sass/lightgallery.scss";
+
+.lg-download {
+	display: none;
+}

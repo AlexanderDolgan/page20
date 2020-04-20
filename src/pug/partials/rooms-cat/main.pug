@@ -1,0 +1,125 @@
+main.site-main
+	section.main-content-room
+		h2 Номера
+		aside
+			.cat-nav
+				.cat-nav-item
+					h2 Студии
+					ul
+						li
+							a(href="rooms.html") Sketch
+							.arrow
+
+				.cat-nav-item
+					h2 Одна спальня
+					ul
+						li
+							a(href="rooms.html") Essay
+							.arrow
+						li
+							a(href="rooms.html") Story
+							.arrow
+						li
+							a(href="rooms.html") Poem
+							.arrow
+						li
+							a(href="rooms.html") Novel
+							.arrow
+				.cat-nav-item
+					h2 Две спальни
+					ul
+						li
+							a(href="rooms.html") Epic
+							.arrow
+
+			.cat-counter
+				.cat-arrow-prev
+				.slider-wraper
+					ul.cat-counter-slider
+						li 1 /
+						li 2 /
+						li 3 /
+						li 4 /
+						li 5 /
+						li 6
+				.cat-arrow-next
+
+
+
+		.cat-room-slider
+			.cat-room-item
+				h3 Студии
+				figure
+					picture
+						a(href="rooms.html")
+							span от <b>12000</b>/ночь
+						img(src="img/photogallery/sketch.jpg", alt="room preview")
+					figcaption
+						h3 
+							a(href="rooms.html") Sketch
+						.room-header-size-capacity 
+							.cap до #[span 2] гостей 
+							.size #[span 27] м<sup>2</sup>
+			.cat-room-item
+				h3 Одна спальня
+				figure
+					picture
+						a(href="rooms.html")
+						img(src="img/photogallery/essay.jpg", alt="room preview")
+					figcaption
+						h3 
+							a(href="rooms.html") Essay
+						.room-header-size-capacity 
+							.cap до #[span 4] гостей 
+							.size #[span 32] м<sup>2</sup>
+			
+			.cat-room-item
+				figure
+					picture
+						a(href="rooms.html")
+						img(src="img/photogallery/story.jpg", alt="room preview")
+					figcaption
+						h3 
+							a(href="rooms.html") Story
+						.room-header-size-capacity 
+							.cap до #[span 3] гостей 
+							.size #[span 30] м<sup>2</sup>
+			
+			.cat-room-item
+				figure
+					picture
+						a(href="rooms.html")
+						img(src="img/photogallery/poem.jpg", alt="room preview")
+					figcaption
+						h3 
+							a(href="rooms.html") Poem
+						.room-header-size-capacity 
+							.cap до #[span 4] гостей 
+							.size #[span 40] м<sup>2</sup>
+
+			.cat-room-item
+				figure
+					picture
+						a(href="rooms.html")
+						img(src="img/photogallery/novel.jpg", alt="room preview")
+					figcaption
+						h3 
+							a(href="rooms.html") Novel
+						.room-header-size-capacity 
+							.cap до #[span 4] гостей 
+							.size #[span 55] м<sup>2</sup>
+			.cat-room-item
+				h3 Две спальни
+				figure
+					picture
+						a(href="rooms.html")
+						img(src="img/photogallery/epic.jpg", alt="room preview")
+					figcaption
+						h3 
+							a(href="rooms.html") Epic
+						.room-header-size-capacity
+							.cap до #[span 2] гостей 
+							.size #[span 27] м<sup>2</sup>
+
+	include ../booking
+	

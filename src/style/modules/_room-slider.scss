@@ -1,0 +1,135 @@
+// round thumbnails
+.room .room-slider-nav {
+	display: none;
+	@media(min-width: $b-large) {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, 9rem);
+		grid-gap: 2rem;
+		& p {
+			position: relative;
+			width: 9rem;
+			height: 9rem;
+			margin-top: 0;
+			border-radius: 50%;
+			opacity: .5;
+			transition: opacity .33s ease-in-out;
+			overflow: hidden;
+			&:hover {
+				opacity: 1;
+			}
+			&:hover::after {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 9rem;
+				height: 9rem;
+				border-radius: 50%;
+				box-shadow: 0 0 0 .125rem ac(text-col) inset, 0 0 0 .75rem ac(third) inset;
+			}
+			& img {
+				width: 9rem;
+				height: 9rem;
+				border-radius: 50%;
+				object-fit: cover;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		width: 100%;
+	}
+	@media(min-width: $b-xxlarge) {
+		grid-gap: 4rem;
+		width: 80%;
+	}
+}
+
+.room .room-slider-nav .active {
+	@media(min-width: $b-large) {
+		opacity: 1;
+		&::after {
+			content: '';
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			width: 9rem;
+			height: 9rem;
+			border-radius: 50%;
+			box-shadow: 0 0 0 .125rem ac(text-col) inset, 0 0 0 .75rem ac(third) inset;
+		}
+	}
+}
+
+.room-preview button {
+	z-index: 1;
+	display: block;
+	position: absolute;
+	width: 5rem;
+	height: 5rem;
+	top: 50%;
+	transform: translateY(-50%);
+	border: none;
+	font-size: 0;
+	background-color: transparent;
+	transition: background-color .33s ease-in-out;
+	@media (min-width: $b-medium) {
+		width: 6rem;
+		height: 6rem;
+	}
+	@media (min-width: $b-xxlarge) {
+		width: 8rem;
+		height: 8rem;
+	}
+}
+
+button.slick-arrow {
+	display: none !important;
+	@media (min-width: $b-large) {
+		display: block !important;
+	}
+}
+
+.room-preview .slick-prev {
+	left: 0;
+	&::before {
+		content:'';
+		display: block;
+		position: absolute;
+		top: 50%;
+		width: 3rem;
+		left: 2rem;
+		height: 3rem;
+		border-right: 2px solid ac(white);
+		border-top: 2px solid ac(white);
+		box-shadow: 1px -1px 1px rgba(0,0,0,.2);
+		transform: translateY(-55%) rotate(-135deg);
+	}
+}
+
+.room-preview .slick-next {
+	right: 0;
+	&::before {
+		content:'';
+		display: block;
+		position: absolute;
+		top: 50%;
+		width: 3rem;
+		height: 3rem;
+		border-right: 2px solid ac(white);
+		border-top: 2px solid ac(white);
+		box-shadow: 1px 0 0px rgba(0,0,0,.2);
+		transform: translateY(-55%) rotate(45deg);
+	}
+}
+
+.room-preview .slick-disabled {
+	opacity: .3;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: ac(white);
+	}
+}

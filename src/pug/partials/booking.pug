@@ -1,0 +1,12 @@
+.booking
+	form(action="index.html" method="post")
+		.fieldset
+			p
+				label(for="check-in") Заезд
+				input(type="date" name="check-in" value="2020-07-21" min="2020-01-01" max="2020-12-31")
+			p
+				label(for="check-out") Выезд
+				input(type="date" name="check-out" value="2020-07-22" min="2020-01-01" max="2020-12-31")
+			
+		p 
+			button(type="submit").btn Найти номер

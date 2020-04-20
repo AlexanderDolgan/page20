@@ -1,0 +1,338 @@
+//main layouts
+
+//main site container
+#site-wrapper {
+	position: relative;
+	// display: grid;
+	// grid-template-rows: minmax(auto, 12rem) auto auto;
+	display: flex;
+	// grid-gap: 4rem;
+	flex-flow: column;
+	justify-content: space-between;
+	min-height: 100vh;
+	overflow: hidden;
+	padding: 0 4rem;
+	@media (min-width: $b-medium-advance) {
+		padding: 0 10rem;
+		grid-gap: 0;
+	}
+	&.site-about {
+		@media (min-width: $b-xxlarge) {
+		}
+	}
+}
+
+.page-bg {
+	background-color: ac(third);
+	background-image: url('../img/assets/bg-lines-color.svg');
+	background-size: 1574px auto, cover;
+	background-position: -314px 150px, center, center;
+	background-repeat: no-repeat;
+	@media (min-width: $b-medium) { 
+		background-size: 1800px auto, cover;
+		background-position: -200px 150px, center, center;
+	}
+	@media (min-width: $b-large) {
+		background-size: 2800px auto, cover;
+		background-position: -250px 190px, center, center;
+	}
+}
+
+.start-page-bg { 
+	background-color: #0E2E28;
+	background-image: url('../img/assets/bg-lines-green.svg');
+	background-repeat: no-repeat;
+	background-size: 1400px;
+	background-position: 52px 400px;
+	@media (min-width: $b-medium) {
+		background-size: 1931px;
+		background-position: -132px -66px;
+	}
+	@media (min-width: $b-xlarge) {
+		background-size: 1931px;
+		background-position: -155px -66px;
+	}
+	@media (min-width: $b-xxlarge) {
+		background-size: 2818px;
+		background-position: -594px -320px;
+	}
+}
+
+//site-header -> logo main navigation -> lang switcher
+// front-page - inner pages
+.site-header {
+	display: flex;
+	justify-content: space-between;
+	padding: 2rem 0;
+	border-bottom: 1px solid rgba(0,0,0,.15);
+	z-index: 999;
+	align-items: center;
+}
+
+.start-page .site-header {
+	border-bottom: none;
+}
+	
+// site-main - text-carousel - booking
+.site-main {
+	display: flex;
+	z-index: 2;
+	flex-direction: column;
+	position: relative;
+}
+
+.start-page .site-main {
+	flex-direction: column;
+	flex-grow: 1;
+	justify-content: space-evenly;
+	@media (min-width: $b-large) {
+		justify-content: space-between;
+	}
+}
+
+// rooms category
+.site-main .main-content-room aside {
+	display: grid;
+	align-content: space-between;
+}
+
+// site footer - socials visa link address mail contact phones
+.site-footer {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-between;
+	position: relative;
+	z-index: 1;
+	margin: 4rem 0;
+	&::before {
+		display: none;
+		content:'';
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 1px;
+		width: calc( 100% - 9rem);
+		background-color: ac(text-col);
+	}
+	&::after {
+		display: none;
+		content: '';
+		position: absolute;
+		top: -2.7rem;
+		left: 0;
+		transform: rotate(33deg);
+		height: 1px;
+		width: 9.8rem;
+		background-color: #a59e93;
+	}
+	// items
+	&__social, 
+	&__visa-link, 
+	&__contacts-address, 
+	&__contacts-tel  {
+		width: 100%;
+		margin-top: 2rem;
+	}
+	@media (min-width: $b-medium) {
+		align-items: center;
+		margin: 0;
+		&::before, &::after {
+			display: block;
+		}
+		&__social, 
+		&__visa-link, 
+		&__contacts-address, 
+		&__contacts-tel  {
+			width: percentage(1/2);
+			margin-top: 0;
+		}
+	}
+	@media (min-width: $b-xlarge) {
+		flex-flow: row nowrap;
+		&__social, 
+		&__visa-link, 
+		&__contacts-address, 
+		&__contacts-tel  {
+			width: auto;
+		}
+	}
+}
+
+.start-page .site-footer {
+	&::before,
+	&::after {
+		display: none;
+	}
+	@media (min-width: $b-xlarge) {
+		margin-top: 0;
+	}
+}
+
+// main content room - cat room
+.main-content-room {
+	display: grid;
+	margin-top: 6rem;
+	& > h2 {
+		font-size: 6rem;
+		display: none;
+	}
+	@media (min-width: $b-medium) {
+		margin: 4rem 0 8rem;
+	}
+	@media (min-width: $b-large) {
+		grid-gap: 4rem;
+		margin: 6rem 0 0;
+	}
+	@media (min-width: $b-xlarge) {
+		grid-template-columns: 35rem 1fr;
+		margin-top: 9rem;
+	}
+	@media (min-width: $b-xxlarge) {
+		grid-template-columns: 50rem 1fr;
+	}
+}
+
+
+
+// room inside
+.main-content-room .room {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 4rem;
+	margin-top: 2rem;
+	grid-template-areas: 
+	"room-header"
+	"preview"
+	"description"
+	"footnote";
+	@media (min-width: $b-medium) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-template-areas: 
+		"room-header 		room-header 	room-header"
+		"preview 				preview 			preview"
+		"description 		description 	description"
+		"footnote 			footnote 			footnote";
+	}
+	@media (min-width: $b-xlarge) {
+		margin-top: 7rem;
+		grid-column-gap: 4rem;
+		grid-template-columns: 1fr 1fr minmax(32rem, 1fr);
+		grid-template-areas: 
+		"preview 				preview 			room-header"
+		"preview 				preview 			description"
+		"preview				preview 			slider-nav"
+		"footnote 			footnote 			footnote";
+		margin-top: 0;
+	}
+	@media (min-width: $b-xxlarge) {
+		grid-template-columns: repeat(3, 1fr);
+		grid-column-gap: 8rem;
+		grid-row-gap: 6rem;
+	}
+}
+
+.room-preview {
+	grid-area: preview;
+	overflow: hidden;
+}
+
+.room-header {
+	grid-area: room-header;
+}
+
+.room-description {
+	grid-area: description;
+}
+
+.room-slider-nav {
+	display: none;
+	grid-area: slider-nav;
+	@media (min-width: $b-large) {
+		display: block;
+	}
+}
+
+.room-footnote {
+	grid-area: footnote;
+}
+
+.main-content-room-inner {
+	&>h2 {
+		font-size: 3rem;
+		font-family: $third-font-family;
+		display: block;
+		@media (min-width: $b-large) {
+			display: none;
+		}
+	}
+}
+
+//services
+.main-content-services {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-row-gap: 4rem;
+	position: relative;
+	z-index: 2;
+	@media (min-width: $b-medium) {
+		margin-bottom: 6rem;
+	}
+	@media (min-width: $b-large) {
+		margin: 6rem 0;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 4rem;
+	}
+	@media (min-width: $b-xlarge) {
+	}
+	@media (min-width: $b-xxlarge) {
+		grid-gap: 8rem;
+		margin-bottom: 10rem;
+		grid-template-columns: 1fr 100rem;
+	}
+}
+
+.main-content-services hgroup {
+	@media (min-width: $b-medium) {
+		padding: 2rem 3rem;
+		& h2 {
+			font-size: 6rem;
+		}
+	}
+	@media (min-width: $b-large) {
+		grid-column: span 2;
+	}
+}
+
+// about
+.main-content-about {
+	display: grid;
+	@media (min-width: $b-medium) {
+		margin-top: 9rem;
+	}
+}
+
+// gallery
+.main-content-gallery {
+	display: grid;
+	position: relative;
+	grid-template-columns: repeat(auto-fit, minmax(40rem,1fr));
+	// grid-auto-rows: 16rem;
+	grid-auto-flow: dense;
+	grid-gap: 3rem;
+	margin-bottom: 10rem;
+	transition: all .33s ease-in;
+	@media (min-width: $b-medium) {
+		// grid-auto-rows: 33rem;
+		margin-top: 4rem;
+	}
+	@media (min-width: $b-large) {
+		grid-gap: 8rem;
+		margin-top: 9rem;
+	}
+}
+
+.main-content-gallery-alt{
+	grid-template-columns: 1fr 1fr;
+}
+
+// location

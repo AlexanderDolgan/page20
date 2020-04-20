@@ -1,0 +1,62 @@
+.room .room-header {
+	display: grid;
+	grid-template-columns: auto auto;
+	align-items: end;
+	position: relative;
+	justify-content: space-between;
+	@media (min-width: $b-medium) {
+		grid-template-columns: auto 1fr 10rem;
+		grid-gap: 4rem;
+		align-items: baseline;
+	}
+	@media (min-width: $b-large) {
+		grid-template-columns: 1fr;
+		align-items: center;
+		grid-gap: 2rem;
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: .125rem;
+			background-color: ac(text-col);
+			left: 0;
+			bottom: -2rem;
+		}
+	}
+}
+
+.room .room-header h2 {
+	grid-column: span 2;
+	display: inline-block;
+	font-size: 6rem;
+	font-family: $header-font-family;
+	line-height: 1;
+	@media (min-width: $b-medium) {
+		grid-column: span 1;
+			font-size: 6rem;
+	}
+	@media (min-width: $b-xxlarge) {
+			font-size: 8rem;
+	}
+}
+
+.room .room-header .room-header-size-capacity {
+	margin-top: 4rem;
+	& div {
+		display: inline-block;
+		margin-right: 2rem;
+	}
+	& span {
+		// font-family: $second-font-family;
+		display: inline-block;
+	}
+	@media (min-width: $b-medium) {
+		& span:nth-child(2) {
+			margin-left: 2rem;
+		}
+	}
+	@media (min-width: $b-large) {
+		margin-top: 0;
+	}
+}

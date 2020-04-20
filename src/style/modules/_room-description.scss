@@ -1,0 +1,14 @@
+.room-description {
+	& h3 {
+		font-size: 2.25rem;
+		font-family: $global-font-family;
+	}
+	& p {
+		color: #6F645F;
+	}
+	@media (min-width: $b-xxlarge) {
+		& h3 {
+			font-sibze: 3rem;
+		}
+	}
+}

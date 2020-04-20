@@ -1,0 +1,29 @@
+//forms configurations
+
+input {
+	width: 100%;
+	padding: 1rem;
+	font-size: 2rem;
+	font-family: $global-font-family;
+	color: ac(text);
+	border: none;
+	border-bottom: solid .1rem	 ac(text-col);
+	background-color: transparent;
+	@media(min-width: $b-medium) {
+		font-size: 3rem;
+	}
+}
+
+textarea {
+	@extend input;
+}
+
+fieldset {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+label {
+	font-family: $third-font-family;
+}

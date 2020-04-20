@@ -1,0 +1,64 @@
+//buttons configurations
+
+.btn {
+	font-size: 2rem;
+	padding: 3rem 4rem;
+	background-color: ac(fourth);
+	color: ac(white);
+	border: none;
+	transition: background-color .33s ease-in-out;
+}
+
+.btn:hover,
+.btn:focus {
+	// box-shadow: 0 1.5rem 3rem rgba(0,0,0,.45);
+	// color: ac(white);
+	background-color: ac(fourth, tint, desat);
+	outline: 0 none;
+}
+
+.btn:active {
+	// color: ac(white);
+	background-color: ac(fourth, tint, sat);
+}
+
+.btn-small {
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+}
+
+.btn-light {
+	background-color: ac(white);
+	color: ac(text);
+}
+
+
+.btn-light:hover, 
+.btn-light:focus,
+.btn-light:active {
+	background-color: ac(white);
+	color: ac(text);
+}
+
+.btn-ghost {
+	background-color: transparent;
+	border: .1rem solid ac(fourth);
+	border-radius: .1rem;
+	color: ac(fourth);
+	padding: 1.5rem 2.5rem;
+	font-size: 1.375rem;
+	@media (min-width: $b-medium) {
+		padding: 2.5rem 5.5rem;
+	}
+}
+
+.btn-ghost:hover,
+.btn-ghost:focus {
+	box-shadow: 0 1rem 2rem rgba(0,0,0,.15);
+	color: ac(white);
+}
+
+.btn-ghost:active {
+	background-color: ac(lightgray, tint);
+	color: ac(white);
+}

@@ -1,0 +1,38 @@
+@import 'btn'; // buttons
+@import 'form';
+@import 'nav';
+@import 'cat-nav'; // category navigation - rooms sidebar
+
+@import 'preloader';
+@import 'site-header-logo';
+@import 'booking'; // booking from
+@import 'site-footer';
+
+// start page
+@import 'text-carousel'; // front page text carousel
+
+// room
+@import 'room-header';
+@import 'room-slider';
+@import 'room-preview';
+@import 'room-description';
+@import 'room-footnote';
+
+@import 'counter';
+
+@import 'cat-room-slider';
+
+// services
+@import 'services-accordion';
+@import 'services-aside';
+
+// about
+@import 'about-item';
+
+// gallery
+@import 'gallery';
+
+// location
+@import 'location-lists';
+@import 'location-map';
+
