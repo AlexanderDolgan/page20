@@ -5,6 +5,7 @@
 	margin-top: 4rem;
 	max-width: 168rem;
 	align-self: flex-start;
+	background-color: #F8F7F6;
 	@media (min-width: $b-large) {
 		display: block;
 	}
@@ -12,7 +13,6 @@
 		max-width: 65vw;
 		margin-top: 2rem;
 		align-self: flex-end;
-		background-color: #F8F7F6;
 	}
 	@media (min-width: $b-xxlarge) {
 		max-width: 70vw;
@@ -86,7 +86,7 @@
 	 width: auto;
    padding: 4rem 10rem;
  }
- @media (min-width: $b-xlarge) {
+ @media (min-width: $b-large) {
 	 padding: 6rem 10rem;
  }
  @media (min-width: $b-xxlarge) {

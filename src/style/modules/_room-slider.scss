@@ -94,6 +94,10 @@ button.slick-arrow {
 
 .room-preview .slick-prev {
 	left: 0;
+	height: 100%;
+	&:hover {
+		background-image: linear-gradient(to left, rgba(0,0,0,0), rgba(255,255,255,.1));
+	}
 	&::before {
 		content:'';
 		display: block;
@@ -107,10 +111,15 @@ button.slick-arrow {
 		box-shadow: 1px -1px 1px rgba(0,0,0,.2);
 		transform: translateY(-55%) rotate(-135deg);
 	}
+	
 }
 
 .room-preview .slick-next {
 	right: 0;
+	height: 100%;
+	&:hover {
+		background-image: linear-gradient(to left, rgba(255,255,255,.1), rgba(0,0,0,0));
+	}
 	&::before {
 		content:'';
 		display: block;

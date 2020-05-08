@@ -1,6 +1,10 @@
 window.onload = function() {
 // const loaderContent = document.getElementsByClassName('loader');
-// loaderContent[0].classList.add('is-hide');
+// function isHide () {
+// 	loaderContent[0].classList.add('is-hide');
+// }
+
+// setTimeout(isHide, 5000);
 
 // function initAccordion(accordionElem){
 
@@ -75,6 +79,8 @@ function galleryTwo() {
 }
 
 $(document).ready(function(){
+	let $loader = $('.loader');
+	$loader.delay( 3000 ).fadeOut( 'slow' );
 
   var allPanels = $('.description').hide();
     
@@ -130,17 +136,51 @@ $(document).ready(function(){
 
 // start page parallax on mouse momve
 (function() {
+
+	function animate({timing, draw, duration}) {
+
+		let start = performance.now();
+
+		requestAnimationFrame(function animate(time) {
+			// timeFraction изменяется от 0 до 1
+			let timeFraction = (time - start) / duration;
+			if (timeFraction > 1) timeFraction = 1;
+
+			// вычисление текущего состояния анимации
+			let progress = timing(timeFraction);
+
+			draw(progress); // отрисовать её
+
+			if (timeFraction < 1) {
+				requestAnimationFrame(animate);
+			}
+
+		});
+	}
+
+
     document.addEventListener("mousemove", parallax);
     const elem = document.querySelector(".start-page-bg");
-    
+
+
 		function parallax(e) {
         let _w = window.innerWidth/2;
         let _h = window.innerHeight/2;
         let _mouseX = e.clientX;
         let _mouseY = e.clientY;
-        let _depth1 = `${50 - (_mouseX - _w) * -0.01}% ${50 - (_mouseY - _h) * -0.01}%`;
-        let x = `${_depth1}`;
-        elem.style.backgroundPosition = x;
+
+			animate({
+				duration: 50,
+				timing: linearFunction => linearFunction,
+				draw(progress){
+					let x = (50 - (_mouseX - _w) * -0.01) * (progress/100);
+					let y = (50 - (_mouseX - _w) * -0.01) * (progress/100);
+					let _depth1 = `${50 - (_mouseX - _w) * -0.01}% ${50 - (_mouseY - _h) * -0.01}%`;
+					elem.style.backgroundPosition = _depth1;
+				}
+			});
+
+
     }
 })();
 

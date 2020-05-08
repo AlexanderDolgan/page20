@@ -136,7 +136,9 @@ function watcher() {
 
 // livereload server sprites plumber gulp-concat gulp-concat
 
-exports.build = series(javaScript, css, html, images, fonts, watcher);
+exports.build = series(javaScript, css, html, fonts, watcher);
+exports.js = series(javaScript);
+exports.images = series(images);
 
 exports.clean = series(clean);
 exports.images = series(images);

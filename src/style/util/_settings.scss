@@ -16,7 +16,7 @@ $font-smooth: antialiased;
 $colors: (
 	primary: hsl(107, 27, 80),
 	secondary: hsl(166, 45, 14),
-	third: hsl(30,10,96),
+	third: hsl(20,9,93),
 	fourth: hsl(35, 61%, 45%),
 	text: hsl(0,0,17),
 	text-col: hsl(39, 9%, 61%),
@@ -44,7 +44,7 @@ $b-large: 1024px;
 $b-xlarge: 1280px;
 $b-xlarge-h: 1440px;
 $b-xxlarge: 1600px;
-$b-xxxlarge: 1921px;
+$b-xxxlarge: 1920px;
 
 $b-small-only: 0 319px;
 $b-medium-only: (max-width: 960px) and (min-width: 320px);

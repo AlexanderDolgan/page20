@@ -35,6 +35,11 @@
 		letter-spacing: .2rem;
 	}
 	@media (min-width: $b-large) {
+		&>h3 {
+			display: none;
+		}
+	}
+	@media (min-width: $b-xlarge) {
 		max-width: 56rem;
 		&>h3 {
 			display: none;

@@ -147,6 +147,11 @@
 			margin-top: 0;
 		}
 	}
+	@media (min-width: $b-large) {
+		min-height: unset;
+		margin-top: 8rem;
+		padding: 2rem 0 0;
+	}
 	@media (min-width: $b-xlarge) {
 		flex-flow: row nowrap;
 		&__social, 
@@ -171,19 +176,19 @@
 // main content room - cat room
 .main-content-room {
 	display: grid;
-	margin-top: 6rem;
+	// margin-top: 6rem;
 	& > h2 {
 		font-size: 6rem;
 		display: none;
 	}
 	@media (min-width: $b-medium) {
-		margin: 4rem 0 8rem;
+		margin: 9rem 0 8rem;
 	}
 	@media (min-width: $b-large) {
-		grid-gap: 4rem;
 		margin: 6rem 0 0;
 	}
 	@media (min-width: $b-xlarge) {
+		grid-gap: 4rem;
 		grid-template-columns: 35rem 1fr;
 		margin-top: 9rem;
 	}
@@ -257,11 +262,12 @@
 }
 
 .main-content-room-inner {
+	margin-top: 4rem;
 	&>h2 {
 		font-size: 3rem;
 		font-family: $third-font-family;
 		display: block;
-		@media (min-width: $b-large) {
+		@media (min-width: $b-xlarge) {
 			display: none;
 		}
 	}
@@ -278,7 +284,7 @@
 		margin-bottom: 6rem;
 	}
 	@media (min-width: $b-large) {
-		margin: 6rem 0;
+		margin: 9rem 0;
 		grid-template-columns: 1fr 1fr;
 		grid-gap: 4rem;
 	}
@@ -319,11 +325,11 @@
 	// grid-auto-rows: 16rem;
 	grid-auto-flow: dense;
 	grid-gap: 3rem;
-	margin-bottom: 10rem;
+	margin: 4rem -4rem 10rem;
 	transition: all .33s ease-in;
 	@media (min-width: $b-medium) {
 		// grid-auto-rows: 33rem;
-		margin-top: 4rem;
+		margin: 9rem 0 10rem;
 	}
 	@media (min-width: $b-large) {
 		grid-gap: 8rem;
