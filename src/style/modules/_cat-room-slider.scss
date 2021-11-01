@@ -252,11 +252,13 @@
 
 .cat-room-slider .slick-prev {
 	left: 4rem;
+	background-color: ac(fourth);
 	&::before {
 		content:'';
 		display: block;
 		position: absolute;
-		top: 50%;
+		top: 53%;
+		left: 37%;
 		width: 3rem;
 		left: 2rem;
 		height: 3rem;
@@ -269,16 +271,18 @@
 
 .cat-room-slider .slick-next {
 	right: 0;
+	background-color: ac(fourth);
 	&::before {
 		content:'';
 		display: block;
 		position: absolute;
-		top: 50%;
+		top: 53%;
+		right: 40%;
 		width: 3rem;
 		height: 3rem;
 		border-right: 2px solid ac(white);
 		border-top: 2px solid ac(white);
-		box-shadow: 1px 0 0px rgba(0,0,0,.2);
+		// box-shadow: 1px 0 0px rgba(0,0,0,.2);
 		transform: translateY(-55%) rotate(45deg);
 	}
 }

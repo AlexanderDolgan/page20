@@ -52,7 +52,11 @@
       </div>
       <div class="room-description">
         <h3>Компактные апартаменты-студии с одной двуспальной кроватью.</h3>
-        <p>Прихожая с гардеробом, спальная зона, полноценная кухня, обеденный стол, ванная комната с душем, широкий деревянный подоконник с рабочей зоной, подборкой книг и журналов, комодом и наблюдательным пунктом. 				</p>
+        <p>Прихожая с гардеробом, спальная зона, полноценная кухня, обеденный стол, ванная комната с душем, широкий деревянный подоконник с рабочей зоной, подборкой книг и журналов, комодом и наблюдательным пунктом.</p>
+        <p></p>
+        <p>
+          <button class="btn btn-ghost btn-room-inner" type="button">Найти номер</button>
+        </p>
       </div>
       <div class="room-slider-desc-counter">
         <div>
@@ -81,21 +85,23 @@
       </div>
     </div>
   </section>
-  <div class="booking">
-    <form action="index.html" method="post">
-      <div class="fieldset">
-        <p>
-          <label for="check-in">Заезд</label>
-          <input type="date" name="check-in" value="2020-07-21" min="2020-01-01" max="2020-12-31"/>
+  <div class="is-hide-absolute">
+    <div class="booking">
+      <form action="index.html" method="post">
+        <div class="fieldset">
+          <p>
+            <label for="check-in">Заезд</label>
+            <input type="date" name="check-in" value="2020-07-21" min="2020-01-01" max="2020-12-31"/>
+          </p>
+          <p>
+            <label for="check-out">Выезд</label>
+            <input type="date" name="check-out" value="2020-07-22" min="2020-01-01" max="2020-12-31"/>
+          </p>
+        </div>
+        <p> 
+          <button class="btn" type="submit">Найти номер</button>
         </p>
-        <p>
-          <label for="check-out">Выезд</label>
-          <input type="date" name="check-out" value="2020-07-22" min="2020-01-01" max="2020-12-31"/>
-        </p>
-      </div>
-      <p> 
-        <button class="btn" type="submit">Найти номер</button>
-      </p>
-    </form>
+      </form>
+    </div>
   </div>
 </main>

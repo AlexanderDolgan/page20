@@ -29,3 +29,16 @@
 .is-hide {
 	display: none;
 }
+
+.is-hide-absolute {
+	position: absolute;
+	left: -9999px;
+	top: -9999px;
+	display: flex;
+	flex-direction: row-reverse;
+	@media(min-width: $b-medium) {
+		position: relative;
+		left: 0;
+		top: 0;
+	}
+}

@@ -19,9 +19,9 @@
   background-image: url('../img/loading_digits.svg');
   background-position: center 30px;
   background-repeat: no-repeat;
-  background-size: 50%;
+  background-size: 100%;
   animation: elevator;
-  animation-duration: 3s;
+  animation-duration: 2s;
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
   &::before {
@@ -32,7 +32,7 @@
     left: 0;
     width: 100%;
     height: 6rem;
-    background-image: linear-gradient(ac(secondary), rgba(0,0,0,0));
+    background-image: linear-gradient(ac(secondary), rgba(14,46,40,0));
   }
   &::after {
     content: '';
@@ -40,7 +40,7 @@
     position: absolute;
     width: 100%;
     height: 6rem;
-    background-image: linear-gradient(rgba(0,0,0,0), ac(secondary));
+    background-image: linear-gradient(rgba(14,46,40,0), ac(secondary));
     bottom: 0;
     left: 0;
   }

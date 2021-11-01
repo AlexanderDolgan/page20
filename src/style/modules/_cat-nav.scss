@@ -197,6 +197,9 @@
 	position: relative;
 	width: 8rem;
 	height: 2rem;
+	&:hover {
+		cursor: pointer;
+	}
 	&::before {
 		content: '';
 		position: absolute;
