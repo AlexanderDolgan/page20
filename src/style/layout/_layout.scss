@@ -59,12 +59,25 @@
 }
 
 .scrolled-content {
-	background-color: white;
 	position: absolute;
 	width: 100%;
-	z-index: 2;
 	top: 100%;
 	left: 0;
+	padding: 3rem 4rem;
+	z-index: 2;
+	background-color: ac(third);
+	@media (min-width: $b-medium) {
+		padding: 5rem 10rem;
+		& .s-offers {
+			padding-bottom: 8rem;
+		}
+	}
+	@media (min-width: $b-xxlarge) {
+		padding: 15rem 10rem 2rem;
+		& .s-offers {
+			padding-bottom: 0;
+		}
+	}
 }
 
 .fixed-content {
@@ -73,7 +86,17 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	display: flex;
+	flex-flow:column nowrap;
+	padding: 0 4rem;
 	z-index: 1;
+	@media (min-width: $b-medium-advance) {
+		padding: 0 10rem;
+	}
+	&.site-about {
+		@media (min-width: $b-xxlarge) {
+		}
+	}
 }
 
 //site-header -> logo main navigation -> lang switcher
