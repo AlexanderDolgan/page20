@@ -10,7 +10,7 @@
 	flex-flow: column;
 	justify-content: space-between;
 	min-height: 100vh;
-	overflow: hidden;
+	// overflow: hidden;
 	padding: 0 4rem;
 	@media (min-width: $b-medium-advance) {
 		padding: 0 10rem;
@@ -56,6 +56,24 @@
 		background-size: 2818px;
 		background-position: -594px -320px;
 	}
+}
+
+.scrolled-content {
+	background-color: white;
+	position: absolute;
+	width: 100%;
+	z-index: 2;
+	top: 100%;
+	left: 0;
+}
+
+.fixed-content {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1;
 }
 
 //site-header -> logo main navigation -> lang switcher

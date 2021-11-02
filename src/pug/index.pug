@@ -1,9 +1,23 @@
 include partials/head
 body
-	.loader
+	//- .loader
 		.preloader
 
-	#site-wrapper.start-page-bg.start-page
-		include partials/start-page/header
-		include partials/start-page/main
-		include partials/footer
+	#site-wrapper 
+		.fixed-content.start-page-bg.start-page
+			include partials/start-page/header
+			include partials/start-page/main
+		
+		.scrolled-content
+			.s-offers
+				h2 Специальные предложения
+
+				.s-offer-card
+					.s-offer-card-img
+						img(src="", alt="img")
+					.s-offer-card-description 
+						.h3 В кругу друзей
+						p. 
+							Бронируйте апартаменты на вечер без ночевки для проведения семейного ужина, дружеской встречи или чтобы отметить любой свой праздник! Специальные условия: Время аренды - с 18:00 до 23:00 Цена - 50% от стоимости номера
+
+			include partials/footer
