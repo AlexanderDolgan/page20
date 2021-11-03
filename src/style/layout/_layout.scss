@@ -39,8 +39,7 @@
 }
 
 .start-page-bg { 
-	background-color: #0E2E28;
-	background-image: url('../img/assets/bg-lines-green.svg');
+	background-image: url(../img/assets/bg-lines-green.svg);
 	background-repeat: no-repeat;
 	background-size: 1400px;
 	background-position: 52px 400px;
@@ -86,6 +85,8 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
+	min-width: 100vw;
+	min-height: 100vh;
 	display: flex;
 	flex-flow:column nowrap;
 	padding: 0 4rem;
@@ -96,6 +97,32 @@
 	&.site-about {
 		@media (min-width: $b-xxlarge) {
 		}
+	}
+}
+
+.bg-image-slider {
+	position: fixed;
+	top:0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: #0E2E28;
+	min-width: 100vw;
+	min-height: 100vh;
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+	& .bg-image-slider-gradient {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		background-image: radial-gradient(circle at 75% 10%,rgba(24,55,49,.85) 0,#183731 100%);
+		background-size: 100%;
+		background-position: 0 0;
 	}
 }
 
@@ -126,6 +153,7 @@
 	flex-direction: column;
 	flex-grow: 1;
 	justify-content: space-evenly;
+	padding-bottom: 10rem;
 	@media (min-width: $b-large) {
 		justify-content: space-between;
 	}
