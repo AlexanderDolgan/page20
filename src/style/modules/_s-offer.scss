@@ -4,11 +4,13 @@
     & h2 {
         font-size: 3.75rem;
         line-height: 1.25;
+        max-width: 80rem;
     }
     @media (min-width:$b-xxlarge) {
         flex-flow: row nowrap;
         & h2 {
             font-size: 6rem;
+            max-width: 60rem;
         }
     }
 }
@@ -60,4 +62,28 @@
          margin: 0;
          padding: 0;
      }
+}
+
+.s-offer-btn {
+    position: relative;
+    width: 100%;
+    color: ac(third);
+    text-align: center;
+    font-family: $third-font-family;
+    font-size: 2rem;
+    @media(min-width: $b-large) {
+        font-size: 2.5rem;
+    }
+    @media(min-width: $b-xxlarge) {
+        font-size: 3rem;
+    }
+}
+
+.arrow-down {
+    width: 1.5rem;
+    height: 1.5rem;
+    margin: 0 auto;
+    border-left: .2rem solid ac(third);
+    border-top: .2rem solid ac(third);
+    transform: rotate(-135deg);
 }
