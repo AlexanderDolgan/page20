@@ -38,14 +38,12 @@
 	}
 }
 
-.start-page-bg { 
-	background-image: url(../img/assets/bg-lines-green.svg);
-	background-repeat: no-repeat;
-	background-size: 1400px;
-	background-position: 52px 400px;
+.start-page-bg { 	
 	@media (min-width: $b-medium) {
+		background-image: url(../img/assets/bg-lines-green.svg);
 		background-size: 1931px;
 		background-position: -132px -66px;
+		background-repeat: no-repeat;
 	}
 	@media (min-width: $b-xlarge) {
 		background-size: 1931px;
@@ -110,9 +108,13 @@
 	min-width: 100vw;
 	min-height: 100vh;
 	& img {
+		display: none;
 		width: 100%;
 		height: 100%;
 		object-fit: cover;
+		@media(min-width: $b-medium) {
+			display: block;
+		}
 	}
 	& .bg-image-slider-gradient {
 		position: fixed;
@@ -120,7 +122,7 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
-		background-image: radial-gradient(circle at 75% 10%,rgba(24,55,49,.85) 0,#183731 100%);
+		background-image: radial-gradient(circle at 75% 10%,rgba(24,55,49,.75) 0,#183731 100%);
 		background-size: 100%;
 		background-position: 0 0;
 	}
@@ -152,8 +154,11 @@
 .start-page .site-main {
 	flex-direction: column;
 	flex-grow: 1;
-	justify-content: space-evenly;
+	justify-content: flex-start;
 	padding-bottom: 6rem;
+	@media (min-width: $b-medium) {
+		justify-content: space-evenly;
+	}
 	@media (min-width: $b-large) {
 		justify-content: space-between;
 	}

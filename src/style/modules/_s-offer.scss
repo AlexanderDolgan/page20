@@ -71,15 +71,35 @@
 .s-offer-btn {
     position: relative;
     width: 100%;
-    color: ac(third);
-    text-align: center;
+    max-width: 56rem;
+    margin: 4rem auto 0;
+    padding: 1rem 0 7rem;
+    background-image: url(../img/assets/bg-sbtn.svg);
+    opacity: .7;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
     font-family: $third-font-family;
-    font-size: 2rem;
+    font-size: 1.5rem;
+    text-align: center;
+    color: ac(white);
+    @media(min-width: $b-medium) {
+        opacity: 1;
+        background-image: url(../img/assets/btn-bg.svg);
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        padding: 1rem;
+        max-width: 35rem;
+    }
     @media(min-width: $b-large) {
-        font-size: 2.5rem;
+        left: 0;
+        right: auto;
     }
     @media(min-width: $b-xxlarge) {
-        font-size: 3rem;
+        max-width: 64rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -90,4 +110,8 @@
     border-left: .2rem solid ac(third);
     border-top: .2rem solid ac(third);
     transform: rotate(-135deg);
+    @media(min-width: $b-large) {
+        width: 1.5rem;
+        height: 1.5rem;
+    }
 }

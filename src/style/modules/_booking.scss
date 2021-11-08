@@ -83,11 +83,11 @@
 	padding: 3.5rem 6rem;
  }
  @media (min-width: $b-medium) {
-	 width: auto;
-   padding: 4rem 10rem;
+	width: auto;
+	padding: 4rem 10rem;
  }
  @media (min-width: $b-large) {
-	 padding: 6rem 10rem;
+	padding: 6rem 10rem;
  }
  @media (min-width: $b-xxlarge) {
    padding: 6rem 15rem;
@@ -100,7 +100,9 @@
 	display: block;
 	width: 100%;
 	background-color: transparent;
-	margin-bottom: 8rem;
+	@media (min-width: $b-medium) {
+		margin-bottom: 8rem;
+	}
 	
 }
 

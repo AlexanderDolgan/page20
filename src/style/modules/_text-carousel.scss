@@ -9,11 +9,11 @@
 
 .text-carousel {
 	display: flex;
-	flex-grow: 1;
+	// flex-grow: 1;
 	flex-direction: column;
 	justify-content: center;
 	max-width: 80vw;
-	margin-top: 4rem;
+	// margin-top: 4rem;
 	& br {
 		display: none;
 	}
