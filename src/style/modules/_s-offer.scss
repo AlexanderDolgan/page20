@@ -129,12 +129,13 @@
     animation-timing-function: ease-in-out;
     @media (min-width: $b-medium) {
         max-width: 8rem;
-        min-height: 2rem;
+        min-height: 3rem;
         animation: bounce2 3s infinite;
+        margin-top: 0;
     }
     @media (min-width: $b-xxlarge) {
-        max-width: 12rem;
-        min-height: 4rem;
+        // max-width: 12rem;
+        // min-height: 4rem;
     }
 }
 
