@@ -1,4 +1,6 @@
 window.onload = function() {
+
+
 // const loaderContent = document.getElementsByClassName('loader');
 // function isHide () {
 // 	loaderContent[0].classList.add('is-hide');
@@ -158,6 +160,8 @@ $(document).ready(function(){
 			}
     return false;
   });
+
+
 
   // $('.header').click(function() {
   //     let $this = $(this);
@@ -352,6 +356,8 @@ $('.text-carousel').show();
 	// 		})
 	// 	);
 	// }
+
+
 	 
 	if ($window.width() < 1280) {
 		if ($slick_slider.hasClass('slick-initialized'))
@@ -364,6 +370,27 @@ $('.text-carousel').show();
 
 });
 
+// function scrollingBy() {
+// 	window.scrollBy(0,500)
+// }
 
-
-
+function scrollingBy(pos, time) {
+    var currentPos = window.pageYOffset;
+    var start = null;
+    if(time == null) time = 500;
+    pos = +pos, time = +time;
+    window.requestAnimationFrame(function step(currentTime) {
+        start = !start ? currentTime : start;
+        var progress = currentTime - start;
+        if (currentPos < pos) {
+            window.scrollTo(0, ((pos - currentPos) * progress / time) + currentPos);
+        } else {
+            window.scrollTo(0, currentPos - ((currentPos - pos) * progress / time));
+        }
+        if (progress < time) {
+            window.requestAnimationFrame(step);
+        } else {
+            window.scrollTo(0, pos);
+        }
+    });
+}

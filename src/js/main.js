@@ -16,6 +16,4 @@
  * Customm
  */
 
-
-
 //= partials/app.js
