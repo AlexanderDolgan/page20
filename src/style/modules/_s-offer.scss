@@ -51,6 +51,11 @@
         width: 23rem;
         min-width: 23rem;
     }
+    @media (min-width:$b-xlarge) {
+        width: 23rem;
+        min-width: 23rem;
+        max-height: 25rem;
+    }
 }
 
 .s-offer-card .s-offer-card-description {
@@ -127,6 +132,7 @@
     margin-top: 0.5em;
     animation: bounce 3s infinite;
     animation-timing-function: ease-in-out;
+    min-height: 4.5rem;
     @media (min-width: $b-medium) {
         max-width: 8rem;
         min-height: 3rem;

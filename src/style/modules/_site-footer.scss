@@ -7,8 +7,9 @@
 	}
 }
 
-.site-about .site-footer,
-.start-page .site-footer {
+.site-about .site-footer
+// .start-page .site-footer 
+{
 	color: ac(white);
 	& a {
 		color: ac(white);
@@ -45,8 +46,9 @@
 	}
 }
 
-.site-about .site-footer .site-footer__social,
-.start-page .site-footer .site-footer__social {
+.site-about .site-footer .site-footer__social
+// .start-page .site-footer .site-footer__social 
+{
 	& ul li a path {
 		fill: ac(white);
 	}
@@ -75,8 +77,9 @@
 	}
 }
 
-.site-about .site-footer__visa-link,
-.start-page .site-footer__visa-link {
+.site-about .site-footer__visa-link
+// .start-page .site-footer__visa-link 
+{
 	color: ac(white);
 }
 
@@ -146,7 +149,8 @@
 	}
 }
 
-.site-about .site-footer__contacts-tel ul li a .tel-icon path,
-.start-page .site-footer__contacts-tel ul li a .tel-icon path {
+.site-about .site-footer__contacts-tel ul li a .tel-icon path
+// .start-page .site-footer__contacts-tel ul li a .tel-icon path 
+{
 	fill: ac(white);
 }
