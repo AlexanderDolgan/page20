@@ -88,6 +88,20 @@ window.onload = function() {
 	
 	$(document).ready(function(){
 	
+		$(".room-preview").lightGallery(
+			{
+				selector: '.room-preview__item',
+				// controls: false
+			}
+		);
+
+		$(".main-content-gallery").lightGallery(
+			{
+				selector: 'picture',
+				// controls: false
+			}
+		);
+
 		const siteHeaderNav = $( '.site-header__nav' );
 	
 		$( '.site-header__nav-ham-btn' ).on("click", function() {

@@ -20,19 +20,19 @@
 	& h2 {
 		font-family: $third-font-family;
 		font-weight: normal;
-		font-size: 3.5rem;
+		font-size: 4.5rem;
 		color: ac(white);
 		word-break: keep-all;
 		line-height: 1.2;
 	}
 	@media (min-width: 375px) {
 		& h2 {
-			font-size: 4rem;
+			// font-size: 4rem;
 		}
 	 }
 	@media (min-width: 380px) {
 		& h2 {
-			font-size: 4.75rem;
+			// font-size: 4.75rem;
 		}
 	 }
 	@media (min-width: $b-medium) {

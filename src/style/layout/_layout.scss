@@ -39,11 +39,11 @@
 }
 
 .start-page-bg { 	
+	background-image: url(../img/assets/bg-lines-green.svg);
+	background-size: 1931px;
+	background-position: -132px -66px;
+	background-repeat: no-repeat;
 	@media (min-width: $b-medium) {
-		background-image: url(../img/assets/bg-lines-green.svg);
-		background-size: 1931px;
-		background-position: -132px -66px;
-		background-repeat: no-repeat;
 	}
 	@media (min-width: $b-xlarge) {
 		background-size: 1931px;
