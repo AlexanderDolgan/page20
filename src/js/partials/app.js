@@ -16,60 +16,60 @@ window.onload = function() {
 	// const loaderContent = document.getElementsByClassName('loader');
 	// loaderContent[0].classList.add('is-hide');
 	
-	function initAccordion(accordionElem){
+	// function initAccordion(accordionElem){
 	
-		//when panel is clicked, handlePanelClick is called.          
-		function handlePanelClick(event) {
-			showPanel(event.currentTarget);
-		}
+	// 	//when panel is clicked, handlePanelClick is called.          
+	// 	function handlePanelClick(event) {
+	// 		showPanel(event.currentTarget);
+	// 	}
 	
-		//Hide currentPanel and show new panel.  
-		function showPanel(panel){
-			//Hide current if it's already has active class. 
-			if (panel.classList.contains('accordion-active-item')) {
-				panel.classList.remove('accordion-active-item');
-			} else {
-				//Hide active one.
-				const expandedPanel = accordionElem.querySelector('.accordion-active-item');
+	// 	//Hide currentPanel and show new panel.  
+	// 	function showPanel(panel){
+	// 		//Hide current if it's already has active class. 
+	// 		if (panel.classList.contains('accordion-active-item')) {
+	// 			panel.classList.remove('accordion-active-item');
+	// 		} else {
+	// 			//Hide active one.
+	// 			const expandedPanel = accordionElem.querySelector('.accordion-active-item');
 					
-				if (expandedPanel){
-						expandedPanel.classList.remove('accordion-active-item');
-				}
-				//Show new one
-				panel.classList.add('accordion-active-item');
-			}
-		}
+	// 			if (expandedPanel){
+	// 					expandedPanel.classList.remove('accordion-active-item');
+	// 			}
+	// 			//Show new one
+	// 			panel.classList.add('accordion-active-item');
+	// 		}
+	// 	}
 	
-		if (accordionElem)
-		{
-			const allPanelElems = accordionElem.querySelectorAll('.accordion-item');
+	// 	if (accordionElem)
+	// 	{
+	// 		const allPanelElems = accordionElem.querySelectorAll('.accordion-item .header');
 	
-			for (let i = 0, len = allPanelElems.length; i < len; i++){
-				allPanelElems[i].addEventListener('click', handlePanelClick);
-			}
-			// //By Default Show first panel
-			// showPanel(allPanelElems[0])
-		}
+	// 		for (let i = 0, len = allPanelElems.length; i < len; i++){
+	// 			allPanelElems[i].addEventListener('click', handlePanelClick);
+	// 		}
+	// 		// //By Default Show first panel
+	// 		// showPanel(allPanelElems[0])
+	// 	}
 	
-	}
+	// }
 	
-	const topImg = document.getElementsByClassName('top');
+	// const topImg = document.getElementsByClassName('top');
 	
-	const accordionElem = document.getElementById('services-accordion');
+	// const accordionElem = document.getElementById('services-accordion');
 	
-	if (accordionElem) {
-		for (let i = 0, len = accordionElem.children.length; i < len; i++)
-		{
-			(function(index){
-				accordionElem.children[i].onclick = function() {
-					topImg[0].children[0].src = 'http://localhost:8888/img/services-' + i + '.jpg'
-				}
-			})(i);
-		}
-	}
+	// if (accordionElem) {
+	// 	for (let i = 0, len = accordionElem.children.length; i < len; i++)
+	// 	{
+	// 		(function(index){
+	// 			accordionElem.children[i].onclick = function() {
+	// 				topImg[0].children[0].src = 'http://localhost:8888/img/services-' + i + '.jpg'
+	// 			}
+	// 		})(i);
+	// 	}
+	// }
 		
 		
-	initAccordion(document.getElementById('services-accordion'));
+	// initAccordion(document.getElementById('services-accordion'));
 	
 	
 	
@@ -88,6 +88,43 @@ window.onload = function() {
 	
 	$(document).ready(function(){
 	
+		var allPanels = $('.description').hide();
+    
+  $('.accordion-item .header').click(function() {
+      let $this = $(this).parent();
+      // let $target =  $this.next();
+      if(!$this.hasClass('accordion-active-item')){
+         $('.accordion-item').removeClass('accordion-active-item');
+         allPanels.slideUp();
+         $this.addClass('accordion-active-item');
+				 $this.children('.description').slideDown();
+				
+				let $imageUrl = $this.attr('data-image');
+
+				$(".top img").one("load", function() {
+					let $top = $('.top img');
+					let $bot = $('.bot img');
+					let rand = Math.random();
+					console.log(rand);
+					if ( rand > .5) {
+						$('.top img').attr('src', $imageUrl);
+					} else {
+						$('.bot img').attr('src', $imageUrl);
+					}
+				}).each(function() {
+					if(this.complete) {
+							$(this).trigger('load');
+					}
+				});
+
+      } else {
+				allPanels.slideUp();
+				$this.removeClass('accordion-active-item');
+			}
+    return false;
+  });
+
+
 		$(".room-preview").lightGallery(
 			{
 				selector: '.room-preview__item',
